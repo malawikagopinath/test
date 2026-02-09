@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Be My Valentine 💌</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #ffe6f0;
+      padding-top: 50px;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #d63384;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    #no {
+      background-color: #ccc;
+    }
+
+    #response {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #d63384;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- UPDATED IMAGE PATH -->
+  <img src="valentine.jpeg" alt="Valentine image">
+
+  <h1>Will you be my Valentine? 💖</h1>
+
+  <button id="yes" onclick="sayYes()">Yes</button>
+  <button id="no" onmouseover="moveNo()">No</button>
+
+  <p id="response"></p>
+
+  <script>
+    function sayYes() {
+      document.getElementById("response").innerHTML =
+        "YAY 💕!!!";
+    }
+
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      noBtn.style.position = "absolute";
+      noBtn.style.left = Math.random() * 80 + "vw";
+      noBtn.style.top = Math.random() * 80 + "vh";
+    }
+  </script>
+</body>
+</html>
